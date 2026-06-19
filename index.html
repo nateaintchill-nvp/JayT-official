@@ -14,7 +14,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
-            -webkit-font-smoothing: antialiased; /* Làm mịn chữ trên các trình duyệt hệ Mac/iOS */
+            -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
@@ -174,7 +174,7 @@
             margin-top: 8px;
         }
 
-        /* Cột phải chứa ảnh - Giới hạn kích thước và khóa chặt bên lề phải */
+        /* Cột phải chứa ảnh - Đã ép hình chân dung vào mượt mà */
         .hero-right-col {
             width: 500px; 
             flex-shrink: 0;
@@ -184,7 +184,7 @@
         .hero-large-img {
             width: 100%;
             height: 320px;
-            background: #111 url('HÌNH_ẢNH_HÌNH_CHỮ_NHẬT_CỦA_BẠN.jpg') center/cover no-repeat;
+            background: #111 url('input_file_1.png') center/cover no-repeat;
             border: 1px solid rgba(230, 194, 128, 0.3);
             box-shadow: 0 0 30px rgba(255, 0, 51, 0.15);
         }
@@ -194,11 +194,11 @@
             font-size: 15px;
             color: #b3b3b3; 
             font-weight: 300;
-            line-height: 1.8; /* Khoảng cách dòng chuẩn đồ họa, không bị dính chữ */
+            line-height: 1.8; 
             letter-spacing: 0.5px; 
             max-width: 950px;
             margin-bottom: 35px;
-            text-align: justify; /* Cân bằng hai lề đều đặn */
+            text-align: justify;
         }
 
         /* Điểm xuyết chữ trắng làm điểm nhấn */
@@ -287,7 +287,7 @@
         .about-img {
             width: 100%;
             height: 550px;
-            background: #111 url('HÌNH_ẢNH_CỦA_BẠN_CHÂN_DUNG.jpg') center/cover no-repeat;
+            background: #111 url('input_file_1.png') center/cover no-repeat;
             border: 1px solid #222;
             position: relative;
         }
@@ -317,7 +317,7 @@
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 30px;
-            line-height: 1.3; /* Tăng độ thoáng cho tiêu đề chính */
+            line-height: 1.3;
             letter-spacing: 0.5px;
         }
 
@@ -337,7 +337,6 @@
             background: linear-gradient(180deg, transparent 0%, rgba(8, 7, 7, 0.6) 100%);
         }
 
-        /* Chuẩn hóa khối tiêu đề Vision (Đã bỏ hoàn toàn inline style) */
         .vision-header {
             text-align: center; 
             max-width: 600px; 
@@ -394,7 +393,7 @@
         .vision-card p {
             color: #777;
             font-size: 14px;
-            line-height: 1.7; /* Chữ trong card khít và đều đặn */
+            line-height: 1.7;
             text-align: justify;
         }
 
@@ -441,7 +440,7 @@
     <header>
         <!-- LOGO JAYT MỚI GÓC TRÁI TRÊN CÙNG -->
         <div class="header-logo">
-            <img src="att.hacS_MihS4-y1a27nDCc88fCbCjIwSjDBuQBOHOiERQ.JPG" alt="JayT Logo">
+            <img src="input_file_0.png" alt="JayT Logo">
         </div>
         <div class="header-text">22 ENTERTAINMENT <span>VIETNAM</span></div>
     </header>
@@ -457,7 +456,7 @@
                         
                         <!-- Group chứa Logo JAYT 3D mới và tên thật TRẦN MINH TRÍ song hành đẳng cấp -->
                         <div class="hero-title-group">
-                            <img src="att.hacS_MihS4-y1a27nDCc88fCbCjIwSjDBuQBOHOiERQ.JPG" alt="JAYT" class="hero-logo-img">
+                            <img src="input_file_0.png" alt="JAYT" class="hero-logo-img">
                             <div class="main-real-name"><span class="text-red">T</span>RẦN MINH <span class="text-red">T</span>RÍ</div>
                         </div>
                         
@@ -468,7 +467,7 @@
                     
                     <div class="hero-right-col">
                         <div class="hero-large-img">
-                            <!-- Thay đường dẫn ảnh chữ nhật của ông vào đây -->
+                            <!-- Ảnh DJ ôm bàn mix đã được gọi tự động bằng CSS Background phía trên -->
                         </div>
                     </div>
                 </div>
@@ -515,7 +514,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-img">
-                    <!-- Thay bằng ảnh chân dung lớn chất lượng cao của ông ở đây -->
+                    <!-- Ảnh chân dung chất lượng cao của ông hiển thị toàn diện tại đây -->
                 </div>
                 <div class="about-text">
                     <h3>The Origin Story</h3>
@@ -530,7 +529,6 @@
     <!-- Vision Section -->
     <section class="vision" id="vision">
         <div class="container">
-            <!-- Khối Tiêu Đề Đã Được Làm Sạch Code -->
             <div class="vision-header">
                 <h3>The Ambition</h3>
                 <h2>Nhiệt Huyết & Cống Hiến</h2>
