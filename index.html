@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JayT - Official DJ Profile</title>
-    <!-- Import Font Montserrat (Hỗ trợ tiếng Việt 100% chuẩn xác & chuyên nghiệp) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+    <!-- Import Font Montserrat & Syne (Cho vibe Techno Club Underground) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Syne:wght@800&display=swap" rel="stylesheet">
    
     <style>
+        /* Base Setup */
         * {
             margin: 0;
             padding: 0;
@@ -58,6 +59,7 @@
         }
 
 
+        /* Header / Navigation */
         header {
             position: fixed;
             top: 0;
@@ -110,6 +112,7 @@
         }
 
 
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             padding-top: 180px;
@@ -130,81 +133,75 @@
         .hero-top-layout {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: center; /* Căn giữa dọc cả 2 cột lớn cực chuẩn */
             gap: 50px;
             margin-bottom: 45px;
         }
 
 
-        /* Cột trái chứa tổ hợp logo lớn và khối chữ cân bằng */
+        /* Cột trái chứa tổ hợp logo lớn và tên thật */
         .hero-left-col {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Đảm bảo nội dung luôn căn giữa dọc */
+            min-height: 320px; /* Bằng đúng chiều cao khung ảnh DJ bên cạnh */
         }
 
 
-        /* KHU VỰC SONG HÀNH: LOGO JAYT LỚN NẰM NGANG HÀNG NHAU VỚI CỤM CHỮ */
+        /* KHU VỰC SONG HÀNH: LOGO JAYT LỚN NẰM NGAY CẠNH TRẦN MINH TRÍ */
         .hero-title-group {
             display: flex;
-            align-items: center; /* Căn chỉnh tâm trục ngang hoàn hảo giữa logo và chữ */
-            gap: 30px;
+            align-items: center; /* Căn giữa dọc hoàn hảo cho logo lớn và chữ kế bên */
+            gap: 35px;
             flex-wrap: wrap;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
 
 
         /* LOGO JAYT LỚN - HÒA TRỘN TRANSPARENT VÀ PHÁT SÁNG NEON */
         .hero-logo-img {
-            height: 130px;
+            height: 160px; /* Tăng kích thước từ 120px lên 160px hoành tráng hơn */
             width: auto;
             object-fit: contain;
             mix-blend-mode: screen; /* Loại bỏ toàn bộ phần viền đen của ảnh gốc, giữ lại chrome 3D cực mượt */
-            filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.6)) drop-shadow(0 0 30px rgba(230, 194, 128, 0.3)); /* Kết hợp hào quang đỏ và cam cát */
+            filter: drop-shadow(0 0 20px rgba(255, 0, 51, 0.75)) drop-shadow(0 0 35px rgba(230, 194, 128, 0.45)); /* Kết hợp hào quang đỏ và cam cát rực rỡ */
             animation: logoGlow 3s ease-in-out infinite alternate;
         }
 
 
         @keyframes logoGlow {
             0% {
-                filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.5)) drop-shadow(0 0 25px rgba(230, 194, 128, 0.2));
+                filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.5)) drop-shadow(0 0 25px rgba(230, 194, 128, 0.25));
                 transform: scale(1);
             }
             100% {
-                filter: drop-shadow(0 0 28px rgba(255, 0, 51, 0.9)) drop-shadow(0 0 40px rgba(230, 194, 128, 0.4));
-                transform: scale(1.02); /* Nhịp thở nhẹ cho logo */
+                filter: drop-shadow(0 0 30px rgba(255, 0, 51, 0.95)) drop-shadow(0 0 45px rgba(230, 194, 128, 0.5));
+                transform: scale(1.03); /* Nhịp thở nhẹ tinh tế */
             }
         }
 
 
-        /* KHỐI CHỮ CHỨA TÊN VÀ TAGLINE */
-        .hero-text-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-
-        /* TRẦN MINH TRÍ DÀY DẶN TECHNO CLUB - SỬ DỤNG PHÔNG CHỮ CHUẨN TIẾNG VIỆT KHÔNG LỖI */
+        /* TRẦN MINH TRÍ DÀY DẶN TECHNO CLUB (Đã chuẩn hóa tiếng Việt với font Montserrat) */
         .main-real-name {
-            font-family: 'Montserrat', sans-serif;
             font-size: 34px;
-            font-weight: 900; /* Nâng lên độ dày tối đa để tạo cảm giác vững chãi, uy lực */
+            font-weight: 900;
             color: #ffffff;
             letter-spacing: 2px;
             text-transform: uppercase;
-            line-height: 1.2;
+            line-height: 1.1;
         }
 
 
-        /* ĐƯỜNG TAGLINE DJ / DANCER / EVENT SET UP NẰM NGAY DƯỚI TÊN */
         .hero-name {
-            font-size: 15px;
-            font-weight: 700; /* Tăng độ dày chữ để cân bằng tốt hơn */
-            letter-spacing: 4px;
-            color: #cccccc;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            color: #ffffff;
             display: block;
             text-transform: uppercase;
             text-shadow: none;
-            margin-top: 8px; /* Tạo khoảng cách vừa vặn với tên thật */
+            margin-top: 5px;
         }
 
 
@@ -216,7 +213,7 @@
         }
 
 
-        /* Khung ảnh Hero được thiết kế cố định, không xoay, không zoom */
+        /* Khung ảnh Hero cố định, không xoay, không zoom */
         .hero-large-img {
             width: 100%;
             height: 320px;
@@ -230,7 +227,7 @@
         .hero-large-img img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung hình tự nhiên, không bị bóp méo */
+            object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung tự nhiên, không bị bóp méo */
         }
 
 
@@ -278,6 +275,7 @@
         }
 
 
+        /* --- HIỆU ỨNG CHỮ CHẠY NGANG (MARQUEE) --- */
         .marquee-container {
             background: rgba(8, 7, 7, 0.8);
             backdrop-filter: blur(5px);
@@ -326,6 +324,7 @@
         }
 
 
+        /* About Section */
         .about {
             padding: 120px 0;
             position: relative;
@@ -401,6 +400,7 @@
         }
 
 
+        /* Vision Section */
         .vision {
             padding: 100px 0;
             border-top: 1px solid rgba(230, 194, 128, 0.05);
@@ -449,6 +449,7 @@
         }
 
 
+        /* Footer */
         footer {
             padding: 40px 0;
             border-top: 1px solid rgba(230, 194, 128, 0.05);
@@ -461,6 +462,7 @@
         }
 
 
+        /* Responsive */
         @media (max-width: 968px) {
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .vision-boxes { grid-template-columns: 1fr; }
@@ -468,10 +470,10 @@
             .hero { padding-top: 120px; }
             .hero-top-layout { flex-direction: column; gap: 25px; margin-bottom: 25px; align-items: flex-start; }
            
-            .hero-title-group { flex-direction: row; align-items: center; gap: 20px; margin-bottom: 15px; }
-            .hero-logo-img { height: 90px; }
+            .hero-title-group { flex-direction: column; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+            .hero-logo-img { height: 100px; }
             .main-real-name { font-size: 26px; }
-            .hero-name { font-size: 13px; letter-spacing: 3px; margin-top: 5px; }
+            .hero-name { font-size: 13px; letter-spacing: 3px; }
            
             .hero-right-col { width: 100%; margin-top: 0; margin-left: 0; }
             .hero-large-img { height: 220px; }
@@ -479,18 +481,6 @@
             header { padding: 20px 30px; }
             .header-logo img { height: 32px; }
             .header-text { font-size: 11px; letter-spacing: 1px; }
-        }
-
-
-        @media (max-width: 480px) {
-            .hero-title-group {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
-            .hero-logo-img {
-                height: 80px;
-            }
         }
     </style>
 </head>
@@ -516,24 +506,19 @@
                 <div class="hero-top-layout">
                     <div class="hero-left-col">
                        
-                        <!-- Group chứa Logo JAYT 3D và cụm chữ được xếp ngang hàng cân bằng visual đỉnh cao -->
+                        <!-- Group chứa Logo JAYT 3D lớn hơn và tên thật TRẦN MINH TRÍ được căn giữa hoàn mỹ -->
                         <div class="hero-title-group">
-                            <!-- Logo JayT ở bên trái -->
                             <img src="logo2.png" alt="JAYT" class="hero-logo-img">
-                           
-                            <!-- Khối chữ gồm tên thật và danh xưng chuyên nghiệp ở bên phải ngang hàng logo -->
-                            <div class="hero-text-block">
-                                <h1 class="main-real-name"><span class="text-red">T</span>RẦN MINH <span class="text-red">T</span>RÍ</h1>
-                                <div class="hero-name">
-                                    <span class="text-red">DJ</span> / DANCER / <span class="text-red">EVENT SET UP</span>
-                                </div>
-                            </div>
+                            <div class="main-real-name"><span class="text-red">T</span>RẦN MINH <span class="text-red">T</span>RÍ</div>
                         </div>
                        
+                        <div class="hero-name">
+                            <span class="text-red">DJ</span> / DANCER / <span class="text-red">EVENT SET UP</span>
+                        </div>
                     </div>
                    
                     <div class="hero-right-col">
-                        <!-- ĐOẠN HIỂN THỊ ẢNH CHÂN DUNG BIỂU DIỄN DJ (Được cố định, không xoay, không zoom) -->
+                        <!-- ĐOẠN HIỂN THỊ ẢNH CHÂN DUNG BIỂU DIỄN DJ (IMG_3985.JPG) - Cố định 100% -->
                         <div class="hero-large-img">
                             <img src="IMG_3985.JPG" alt="JayT Performing at DJ Deck">
                         </div>
@@ -585,9 +570,9 @@
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
-                <!-- ĐOẠN HIỂN THỊ ẢNH QUẦY BAR NIGHTLIFE -->
+                <!-- ĐOẠN HIỂN THỊ ẢNH CHÂN DUNG BIỂU DIỄN DJ (IMG_3996.JPG) -->
                 <div class="about-img">
-                    <img src="IMG_3996.JPG" alt="Atmospheric Nightlife Scene with Bottles">
+                    <img src="IMG_3996.JPG" alt="JayT in Action">
                 </div>
                 <div class="about-text">
                     <h3>The Origin Story</h3>
