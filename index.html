@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JayT - Official DJ Profile</title>
+    <!-- Import Font Montserrat (Bản chuẩn siêu mượt cho tiếng Việt) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Setup & Smooth Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased; /* Làm mịn chữ trên các trình duyệt hệ Mac/iOS */
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* PHÔNG NỀN TRẮNG, ĐEN, ĐỎ VÀ VÀNG CÁT BIỂN MŨI NÉ */
+        body {
+            background-color: #080707; /* Màu đen cát than hữu cơ */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 0, 51, 0.12) 0%, transparent 45%), /* Sắc đỏ rực cháy */
+                radial-gradient(circle at 85% 30%, rgba(230, 194, 128, 0.14) 0%, transparent 50%), /* Vàng cát biển Mũi Né ấm áp */
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 60%); /* Ánh sáng trắng tinh khiết */
+            background-attachment: fixed;
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Thao tác chọn văn bản */
+        ::selection {
+            background-color: #ff0033;
+            color: #fff;
+        }
+
+        /* Giao diện chung */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-red {
+            color: #ff0033;
+            text-shadow: 0 0 15px rgba(255, 0, 51, 0.4);
+        }
+
+        /* Điểm nhấn vàng cát biển Mũi Né */
+        .text-sand {
+            color: #e6c280;
+            text-shadow: 0 0 10px rgba(230, 194, 128, 0.3);
+        }
+
+        /* Header / Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(8, 7, 7, 0.95), rgba(8, 7, 7, 0));
+            backdrop-filter: blur(5px);
+        }
+
+        /* LOGO JAYT TRÊN ĐẦU GÓC TRÁI MÀN HÌNH */
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(255, 0, 51, 0.5));
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .header-text {
+            color: #888888;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        
+        .header-text span {
+            color: #ff0033;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            padding-top: 180px; 
+            padding-bottom: 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+            width: 100%;
+        }
+
+        /* Hàng số 1: Tên bên trái và Ảnh cố định bên phải */
+        .hero-top-layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            gap: 50px;
+            margin-bottom: 45px;
+        }
+
+        /* Cột trái chứa tổ hợp logo lớn và tên thật */
+        .hero-left-col {
+            flex: 1;
+        }
+
+        /* KHU VỰC SONG HÀNH: LOGO JAYT LỚN NẰM NGAY CẠNH TRẦN MINH TRÍ */
+        .hero-title-group {
+            display: flex;
+            align-items: center;
+            gap: 35px; 
+            flex-wrap: wrap; 
+            margin-bottom: 25px;
+        }
+
+        /* LOGO JAYT LỚN CỦA ÔNG - ĐÚNG CONCEPT CHROME ĐỎ KIM LOẠI */
+        .hero-logo-img {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(255, 0, 51, 0.7));
+            animation: logoGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% { filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.5)); }
+            100% { filter: drop-shadow(0 0 30px rgba(255, 0, 51, 0.85)); }
+        }
+
+        /* TRẦN MINH TRÍ DÀY DẶN TECHNO CLUB */
+        .main-real-name {
+            font-size: 34px; 
+            font-weight: 900; 
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .hero-name {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #ffffff; 
+            display: block;
+            text-transform: uppercase;
+            text-shadow: none;
+            margin-top: 8px;
+        }
+
+        /* Cột phải chứa ảnh - Giới hạn kích thước và khóa chặt bên lề phải */
+        .hero-right-col {
+            width: 500px; 
+            flex-shrink: 0;
+            margin-left: auto; 
+        }
+
+        .hero-large-img {
+            width: 100%;
+            height: 320px;
+            background: #111 url('HÌNH_ẢNH_HÌNH_CHỮ_NHẬT_CỦA_BẠN.jpg') center/cover no-repeat;
+            border: 1px solid rgba(230, 194, 128, 0.3);
+            box-shadow: 0 0 30px rgba(255, 0, 51, 0.15);
+        }
+
+        /* Hàng số 2: Kiểu chữ sang chảnh thời thượng */
+        .hero-desc {
+            font-size: 15px;
+            color: #b3b3b3; 
+            font-weight: 300;
+            line-height: 1.8; /* Khoảng cách dòng chuẩn đồ họa, không bị dính chữ */
+            letter-spacing: 0.5px; 
+            max-width: 950px;
+            margin-bottom: 35px;
+            text-align: justify; /* Cân bằng hai lề đều đặn */
+        }
+
+        /* Điểm xuyết chữ trắng làm điểm nhấn */
+        .hero-desc .gold-text {
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        /* Nút Booking nằm dưới đoạn văn với dải màu đỏ cát rực lửa */
+        .btn-booking {
+            display: inline-block;
+            padding: 15px 40px;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #ff0033;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.4s ease;
+            box-shadow: 0 0 15px rgba(255, 0, 51, 0.2);
+        }
+
+        .btn-booking:hover {
+            background: #ff0033;
+            box-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+            transform: translateY(-3px);
+            border-color: #ff0033;
+        }
+
+        /* --- HIỆU ỨNG CHỮ CHẠY NGANG (MARQUEE) --- */
+        .marquee-container {
+            background: rgba(8, 7, 7, 0.8);
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(230, 194, 128, 0.1);
+            border-bottom: 1px solid rgba(230, 194, 128, 0.1);
+            padding: 20px 0;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .marquee-content {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-content span {
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            padding: 0 40px;
+            color: rgba(255, 255, 255, 0.08);
+            transition: 0.3s;
+        }
+
+        .marquee-content span.highlight {
+            color: #ff0033;
+            text-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
+        }
+
+        .marquee-content span.sand-highlight {
+            color: #e6c280;
+            text-shadow: 0 0 10px rgba(230, 194, 128, 0.3);
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 550px;
+            background: #111 url('HÌNH_ẢNH_CỦA_BẠN_CHÂN_DUNG.jpg') center/cover no-repeat;
+            border: 1px solid #222;
+            position: relative;
+        }
+
+        .about-img::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #ff0033;
+            z-index: -1;
+        }
+
+        .about-text h3 {
+            font-size: 14px;
+            color: #ff0033;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            line-height: 1.3; /* Tăng độ thoáng cho tiêu đề chính */
+            letter-spacing: 0.5px;
+        }
+
+        .about-text p {
+            color: #aaa;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        /* Vision Section */
+        .vision {
+            padding: 100px 0;
+            border-top: 1px solid rgba(230, 194, 128, 0.05);
+            background: linear-gradient(180deg, transparent 0%, rgba(8, 7, 7, 0.6) 100%);
+        }
+
+        /* Chuẩn hóa khối tiêu đề Vision (Đã bỏ hoàn toàn inline style) */
+        .vision-header {
+            text-align: center; 
+            max-width: 600px; 
+            margin: 0 auto 50px auto;
+        }
+
+        .vision-header h3 {
+            color: #ff0033; 
+            font-size: 14px; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .vision-header h2 {
+            font-size: 36px; 
+            font-weight: 900; 
+            text-transform: uppercase;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        .vision-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .vision-card {
+            background: rgba(15, 14, 14, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 40px 30px;
+            transition: 0.4s;
+            backdrop-filter: blur(10px);
+        }
+
+        .vision-card:hover {
+            border-color: #ff0033;
+            transform: translateY(-5px);
+            background: rgba(25, 10, 12, 0.9);
+            box-shadow: 0 10px 30px rgba(255, 0, 51, 0.1);
+        }
+
+        .vision-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .vision-card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.7; /* Chữ trong card khít và đều đặn */
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(230, 194, 128, 0.05);
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            background: rgba(8, 7, 7, 0.95);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .vision-boxes { grid-template-columns: 1fr; }
+            
+            .hero { padding-top: 120px; }
+            .hero-top-layout { flex-direction: column; gap: 25px; margin-bottom: 25px; align-items: flex-start; }
+            
+            .hero-title-group { flex-direction: column; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+            .hero-logo-img { height: 80px; }
+            .main-real-name { font-size: 28px; }
+            .hero-name { font-size: 13px; letter-spacing: 3px; }
+            
+            .hero-right-col { width: 100%; margin-top: 0; margin-left: 0; } 
+            .hero-large-img { height: 220px; }
+            
+            header { padding: 20px 30px; }
+            .header-logo img { height: 32px; }
+            .header-text { font-size: 11px; letter-spacing: 1px; }
+            
+            .about-text h2 { font-size: 32px; }
+            .vision-header h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- LOGO JAYT MỚI GÓC TRÁI TRÊN CÙNG -->
+        <div class="header-logo">
+            <img src="att.hacS_MihS4-y1a27nDCc88fCbCjIwSjDBuQBOHOiERQ.JPG" alt="JayT Logo">
+        </div>
+        <div class="header-text">22 ENTERTAINMENT <span>VIETNAM</span></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                
+                <!-- Hàng 1: Tổ hợp Tên Luxury + Underground đặt cạnh nhau & Ảnh cố định góc phải -->
+                <div class="hero-top-layout">
+                    <div class="hero-left-col">
+                        
+                        <!-- Group chứa Logo JAYT 3D mới và tên thật TRẦN MINH TRÍ song hành đẳng cấp -->
+                        <div class="hero-title-group">
+                            <img src="att.hacS_MihS4-y1a27nDCc88fCbCjIwSjDBuQBOHOiERQ.JPG" alt="JAYT" class="hero-logo-img">
+                            <div class="main-real-name"><span class="text-red">T</span>RẦN MINH <span class="text-red">T</span>RÍ</div>
+                        </div>
+                        
+                        <div class="hero-name">
+                            <span class="text-red">DJ</span> / DANCER / <span class="text-red">EVENT SET UP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-right-col">
+                        <div class="hero-large-img">
+                            <!-- Thay đường dẫn ảnh chữ nhật của ông vào đây -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hàng 2: Đoạn văn ngắn gọn, tinh chỉnh chữ phong cách sang chảnh -->
+                <p class="hero-desc">
+                    Khởi nguồn từ một Vũ công chuyên nghiệp, <span class="gold-text">JayT</span> định hình tư duy âm nhạc đương đại qua bản sắc <span class="text-red">Open Format</span> đỉnh cao. Sự giao thoa tinh tế giữa Techhouse, Techno, Afrohouse, Baile Funk, Hip Hop, Basshouse, Psytrance và Disco chính là vũ khí tối thượng giúp tôi làm chủ mọi siêu sân khấu, biến mỗi khoảnh khắc thành một tuyệt tác nghệ thuật bùng nổ.
+                </p>
+                
+                <a href="mailto:your-email@gmail.com" class="btn-booking">Get In Touch</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dòng nhạc chạy ngang (Marquee Effect) -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>TECHHOUSE</span> <span class="sand-highlight">•</span>
+            <span>TECHNO</span> <span class="sand-highlight">•</span>
+            <span>BAILE FUNK</span> <span class="sand-highlight">•</span>
+            <span>AFROHOUSE</span> <span class="sand-highlight">•</span>
+            <span>DISCO</span> <span class="sand-highlight">•</span>
+            <span>PSYTRANCE</span> <span class="sand-highlight">•</span>
+            <span>HIPHOP</span> <span class="sand-highlight">•</span>
+            <span>BASSHOUSE</span> <span class="sand-highlight">•</span>
+            <span class="highlight">OPEN FORMAT</span> <span class="sand-highlight">•</span>
+            
+            <!-- Nhân đôi chuỗi để chạy mượt không bị đứt đoạn -->
+            <span>TECHHOUSE</span> <span class="sand-highlight">•</span>
+            <span>TECHNO</span> <span class="sand-highlight">•</span>
+            <span>BAILE FUNK</span> <span class="sand-highlight">•</span>
+            <span>AFROHOUSE</span> <span class="sand-highlight">•</span>
+            <span>DISCO</span> <span class="sand-highlight">•</span>
+            <span>PSYTRANCE</span> <span class="sand-highlight">•</span>
+            <span>HIPHOP</span> <span class="sand-highlight">•</span>
+            <span>BASSHOUSE</span> <span class="sand-highlight">•</span>
+            <span class="highlight">OPEN FORMAT</span> <span class="sand-highlight">•</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <!-- Thay bằng ảnh chân dung lớn chất lượng cao của ông ở đây -->
+                </div>
+                <div class="about-text">
+                    <h3>The Origin Story</h3>
+                    <h2>TRẦN MINH TRÍ <br>Từ Tiếng Sóng Biển <span class="text-sand">Mũ Né</span> Đến Sân Khấu Lớn</h2>
+                    <p>Tôi xuất thân từ vùng biển đầy nắng gió Mũi Né, mang trong mình nhịp điệu tự do của biển cả và xuất phát điểm là một Dancer chuyên nghiệp. Chính tình yêu mãnh liệt với chuyển động và âm thanh đã đưa tôi đến với hành trình của một DJ.</p>
+                    <p>Hiện tại, với tư cách là thành viên chính thức của <b class="text-red">22entertainment</b>, tôi đang định hình và theo đuổi phong cách đánh <b>Open Format</b>. Không giới hạn bản thân, tôi kết hợp nhuần nhuyễn mọi chất liệu âm nhạc từ Techhouse sâu lắng, Techno ma mị cho đến nguồn năng lượng hoang dại của Bailefunk, Afrohouse, Hip Hop hay Basshouse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" id="vision">
+        <div class="container">
+            <!-- Khối Tiêu Đề Đã Được Làm Sạch Code -->
+            <div class="vision-header">
+                <h3>The Ambition</h3>
+                <h2>Nhiệt Huyết & Cống Hiến</h2>
+            </div>
+            
+            <div class="vision-boxes">
+                <div class="vision-card">
+                    <h4 class="text-red">Big Stage Dream</h4>
+                    <p>Với tinh thần luôn học hỏi không ngừng, mục tiêu tối thượng của JayT là đứng trên những sân khấu lớn, làm chủ đám đông bằng kỹ năng vượt bậc và chinh phục hàng vạn người hâm mộ.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>Music Producer</h4>
+                    <p>Không dừng lại ở việc mix nhạc, tôi muốn cống hiến cho cộng đồng những sản phẩm âm nhạc mang đậm dấu ấn cá nhân, khẳng định chất riêng của Trần Minh Trí.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>22 Entertainment</h4>
+                    <p>Đồng hành cùng những người anh em trong team để kiến tạo nên những sự kiện bùng nổ, đem lại những niềm vui bất tận và những khoảnh khắc không bao giờ quên cho khán giả.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 JAYT MUSIC. ALL RIGHTS RESERVED. DESIGNED FOR UNDERGROUND VIBES.</p>
+    </footer>
+
+</body>
+</html>
+
