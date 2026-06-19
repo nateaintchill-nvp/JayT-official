@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JayT - Official DJ Profile</title>
-    <!-- Import Font Montserrat & Syne (Cho vibe Techno Club Underground) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Syne:wght@800&display=swap" rel="stylesheet">
+    <!-- Import Font Montserrat (Hỗ trợ tiếng Việt 100% chuẩn xác & chuyên nghiệp) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
    
     <style>
-        /* Base Setup */
         * {
             margin: 0;
             padding: 0;
@@ -59,7 +58,6 @@
         }
 
 
-        /* Header / Navigation */
         header {
             position: fixed;
             top: 0;
@@ -112,7 +110,6 @@
         }
 
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             padding-top: 180px;
@@ -139,25 +136,25 @@
         }
 
 
-        /* Cột trái chứa tổ hợp logo lớn và tên thật */
+        /* Cột trái chứa tổ hợp logo lớn và khối chữ cân bằng */
         .hero-left-col {
             flex: 1;
         }
 
 
-        /* KHU VỰC SONG HÀNH: LOGO JAYT LỚN NẰM NGAY CẠNH TRẦN MINH TRÍ */
+        /* KHU VỰC SONG HÀNH: LOGO JAYT LỚN NẰM NGANG HÀNG NHAU VỚI CỤM CHỮ */
         .hero-title-group {
             display: flex;
-            align-items: center;
-            gap: 35px;
+            align-items: center; /* Căn chỉnh tâm trục ngang hoàn hảo giữa logo và chữ */
+            gap: 30px;
             flex-wrap: wrap;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
 
         /* LOGO JAYT LỚN - HÒA TRỘN TRANSPARENT VÀ PHÁT SÁNG NEON */
         .hero-logo-img {
-            height: 120px;
+            height: 130px;
             width: auto;
             object-fit: contain;
             mix-blend-mode: screen; /* Loại bỏ toàn bộ phần viền đen của ảnh gốc, giữ lại chrome 3D cực mượt */
@@ -178,27 +175,36 @@
         }
 
 
-        /* TRẦN MINH TRÍ DÀY DẶN TECHNO CLUB */
-        .main-real-name {
-            font-family: 'Syne', sans-serif;
-            font-size: 34px;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            line-height: 1;
+        /* KHỐI CHỮ CHỨA TÊN VÀ TAGLINE */
+        .hero-text-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
 
-        .hero-name {
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 5px;
+        /* TRẦN MINH TRÍ DÀY DẶN TECHNO CLUB - SỬ DỤNG PHÔNG CHỮ CHUẨN TIẾNG VIỆT KHÔNG LỖI */
+        .main-real-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 34px;
+            font-weight: 900; /* Nâng lên độ dày tối đa để tạo cảm giác vững chãi, uy lực */
             color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+
+        /* ĐƯỜNG TAGLINE DJ / DANCER / EVENT SET UP NẰM NGAY DƯỚI TÊN */
+        .hero-name {
+            font-size: 15px;
+            font-weight: 700; /* Tăng độ dày chữ để cân bằng tốt hơn */
+            letter-spacing: 4px;
+            color: #cccccc;
             display: block;
             text-transform: uppercase;
             text-shadow: none;
-            margin-top: 5px;
+            margin-top: 8px; /* Tạo khoảng cách vừa vặn với tên thật */
         }
 
 
@@ -272,7 +278,6 @@
         }
 
 
-        /* --- HIỆU ỨNG CHỮ CHẠY NGANG (MARQUEE) --- */
         .marquee-container {
             background: rgba(8, 7, 7, 0.8);
             backdrop-filter: blur(5px);
@@ -321,7 +326,6 @@
         }
 
 
-        /* About Section */
         .about {
             padding: 120px 0;
             position: relative;
@@ -397,7 +401,6 @@
         }
 
 
-        /* Vision Section */
         .vision {
             padding: 100px 0;
             border-top: 1px solid rgba(230, 194, 128, 0.05);
@@ -446,7 +449,6 @@
         }
 
 
-        /* Footer */
         footer {
             padding: 40px 0;
             border-top: 1px solid rgba(230, 194, 128, 0.05);
@@ -459,7 +461,6 @@
         }
 
 
-        /* Responsive */
         @media (max-width: 968px) {
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .vision-boxes { grid-template-columns: 1fr; }
@@ -467,10 +468,10 @@
             .hero { padding-top: 120px; }
             .hero-top-layout { flex-direction: column; gap: 25px; margin-bottom: 25px; align-items: flex-start; }
            
-            .hero-title-group { flex-direction: column; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
-            .hero-logo-img { height: 80px; }
+            .hero-title-group { flex-direction: row; align-items: center; gap: 20px; margin-bottom: 15px; }
+            .hero-logo-img { height: 90px; }
             .main-real-name { font-size: 26px; }
-            .hero-name { font-size: 13px; letter-spacing: 3px; }
+            .hero-name { font-size: 13px; letter-spacing: 3px; margin-top: 5px; }
            
             .hero-right-col { width: 100%; margin-top: 0; margin-left: 0; }
             .hero-large-img { height: 220px; }
@@ -478,6 +479,18 @@
             header { padding: 20px 30px; }
             .header-logo img { height: 32px; }
             .header-text { font-size: 11px; letter-spacing: 1px; }
+        }
+
+
+        @media (max-width: 480px) {
+            .hero-title-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .hero-logo-img {
+                height: 80px;
+            }
         }
     </style>
 </head>
@@ -503,19 +516,24 @@
                 <div class="hero-top-layout">
                     <div class="hero-left-col">
                        
-                        <!-- Group chứa Logo JAYT 3D và tên thật TRẦN MINH TRÍ song hành đẳng cấp -->
+                        <!-- Group chứa Logo JAYT 3D và cụm chữ được xếp ngang hàng cân bằng visual đỉnh cao -->
                         <div class="hero-title-group">
+                            <!-- Logo JayT ở bên trái -->
                             <img src="logo2.png" alt="JAYT" class="hero-logo-img">
-                            <div class="main-real-name"><span class="text-red">T</span>RẦN MINH <span class="text-red">T</span>RÍ</div>
+                           
+                            <!-- Khối chữ gồm tên thật và danh xưng chuyên nghiệp ở bên phải ngang hàng logo -->
+                            <div class="hero-text-block">
+                                <h1 class="main-real-name"><span class="text-red">T</span>RẦN MINH <span class="text-red">T</span>RÍ</h1>
+                                <div class="hero-name">
+                                    <span class="text-red">DJ</span> / DANCER / <span class="text-red">EVENT SET UP</span>
+                                </div>
+                            </div>
                         </div>
                        
-                        <div class="hero-name">
-                            <span class="text-red">DJ</span> / DANCER / <span class="text-red">EVENT SET UP</span>
-                        </div>
                     </div>
                    
                     <div class="hero-right-col">
-                        <!-- ĐOẠN HIỂN THỊ ẢNH CHÂN DUNG BIỂU DIỄN DJ (IMG_3996.JPG) -->
+                        <!-- ĐOẠN HIỂN THỊ ẢNH CHÂN DUNG BIỂU DIỄN DJ (Được cố định, không xoay, không zoom) -->
                         <div class="hero-large-img">
                             <img src="IMG_3985.JPG" alt="JayT Performing at DJ Deck">
                         </div>
@@ -567,7 +585,7 @@
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
-                <!-- ĐOẠN HIỂN THỊ ẢNH QUẦY BAR NIGHTLIFE (DSC_8660.JPG) -->
+                <!-- ĐOẠN HIỂN THỊ ẢNH QUẦY BAR NIGHTLIFE -->
                 <div class="about-img">
                     <img src="IMG_3996.JPG" alt="Atmospheric Nightlife Scene with Bottles">
                 </div>
