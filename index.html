@@ -210,13 +210,13 @@
         }
 
 
-        /* Khung ảnh Hero được tối ưu để giữ cố định ảnh DJ*/
+        /* Khung ảnh Hero được thiết kế cố định, không xoay, không zoom */
         .hero-large-img {
             width: 100%;
             height: 320px;
             border: 1px solid rgba(230, 194, 128, 0.3);
             box-shadow: 0 0 30px rgba(255, 0, 51, 0.25);
-            overflow: hidden; /* Giữ ảnh cố định bên trong khung */
+            overflow: hidden; /* Giữ ảnh gọn gàng bên trong khung */
             position: relative;
         }
 
@@ -224,16 +224,7 @@
         .hero-large-img img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            /* Lấp đầy khung ảnh ngang */
-            transform: rotate(0deg) scale(0);
-            transform-origin: center;
-            transition: transform 0.5s ease;
-        }
-
-
-        .hero-large-img:hover img {
-            transform: rotate(-90deg) scale(1.48); /* Hiệu ứng zoom nhẹ khi di chuột */
+            object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung hình tự nhiên, không bị bóp méo */
         }
 
 
@@ -495,9 +486,9 @@
 
     <!-- Header -->
     <header>
-        <!-- LOGO JAYT GÓC TRÁI TRÊN CÙNG (Đã được lọc nền trong suốt) -->
+        <!-- LOGO JAYT GÓC TRÁI TRÊN CÙNG -->
         <div class="header-logo">
-            <img src="logo2.jpg" alt="JayT Logo">
+            <img src="logo2.png" alt="JayT Logo">
         </div>
         <div class="header-text">22 ENTERTAINMENT <span>VIETNAM</span></div>
     </header>
@@ -512,9 +503,9 @@
                 <div class="hero-top-layout">
                     <div class="hero-left-col">
                        
-                        <!-- Group chứa Logo JAYT 3D (Đã được lọc nền trong suốt) và tên thật TRẦN MINH TRÍ -->
+                        <!-- Group chứa Logo JAYT 3D và tên thật TRẦN MINH TRÍ song hành đẳng cấp -->
                         <div class="hero-title-group">
-                            <img src="logo2.jpg" alt="JAYT" class="hero-logo-img">
+                            <img src="logo2.png" alt="JAYT" class="hero-logo-img">
                             <div class="main-real-name"><span class="text-red">T</span>RẦN MINH <span class="text-red">T</span>RÍ</div>
                         </div>
                        
@@ -578,7 +569,7 @@
             <div class="about-grid">
                 <!-- ĐOẠN HIỂN THỊ ẢNH QUẦY BAR NIGHTLIFE (DSC_8660.JPG) -->
                 <div class="about-img">
-                    <img src="IMG_3996.JPG">
+                    <img src="IMG_3996.JPG" alt="Atmospheric Nightlife Scene with Bottles">
                 </div>
                 <div class="about-text">
                     <h3>The Origin Story</h3>
